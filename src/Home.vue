@@ -111,7 +111,6 @@
 
       if (urlParams.getAll('category').length > 0) {
         urlParams.getAll('category').forEach(categoryId => {
-          console.log(categoryId)
           this.$store.dispatch('categories/setCategory', {id: categoryId, value: true})
           this.$store.dispatch('books/addCategoryToFilters', categoryId)
         })
