@@ -2,7 +2,7 @@
   <transition name="fade">
     <div class="el-dialog" v-if="modalIsVisible">
 
-      <div @click="close" class="el-dialog__header">
+      <div @click="closeModal" class="el-dialog__header">
         <div class="el-dialog__header-close">X</div>
       </div>
 
@@ -34,10 +34,10 @@
     },
     methods: {
       ...mapActions({
-        setModal: 'other/setModal',
+        setModalState: 'other/setModalState',
       }),
-      close() {
-        this.setModal(false)
+      closeModal() {
+        this.setModalState(false)
       }
     }
   }
@@ -52,6 +52,7 @@
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0.7);
+
 
     &__header {
       height: 50px;
@@ -87,11 +88,14 @@
       height: 80%;
       width: 70%;
       overflow-y: auto;
-      padding: 20px
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 500px;
     }
 
     &__book-image {
       max-height: 300px;
+      margin-bottom: 50px;
     }
 
     &__book-name {

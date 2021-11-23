@@ -5,11 +5,11 @@
 <script>
   export default {
     name: "ElInput",
-    props: ['valaue'],
+    props: ['value1'],
     computed: {
       search: {
         get: function () {
-          return this.value || ''
+          return this.value1 || ''
         },
         set: function (val) {
           this.$emit('inputChange', val)
@@ -24,5 +24,8 @@
     height: 40px;
     width: 100%;
     box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+    outline: none;
   }
 </style>

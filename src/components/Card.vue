@@ -52,7 +52,7 @@
     }
 
     flex-direction: column;
-    border: 1px solid grey;
+    border: 1px solid #dbdbdb;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -60,8 +60,12 @@
     transition: 0.2s;
     cursor: pointer;
 
-    &:hover &__name {
-      color: #dbb062;
+    &:hover  {
+      .el-card__name {
+        color: #dbb062;
+      }
+
+      border: 1px solid #dbb062;
     }
 
     &__right {
