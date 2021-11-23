@@ -94,7 +94,8 @@
     }
 
     &__book-image {
-      max-height: 300px;
+      max-width: 200px;
+      width: 100%;
       margin-bottom: 50px;
     }
 

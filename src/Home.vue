@@ -129,7 +129,7 @@
   @import 'styles/styles';
 
   .el-page {
-    padding: 0 20%;
+    padding: 0 10px;
     overflow-y: scroll;
     height: 100vh;
 
@@ -145,6 +145,10 @@
 
     &__books-item {
       margin-bottom: 20px;
+    }
+
+    @media (min-width: 768px) {
+      padding: 0 20%;
     }
   }
 
